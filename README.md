@@ -100,11 +100,11 @@ Index
 
 **Step 1**: **Launching an instance**
 
-1. Go to **EC2** service in Amazon Console and Click on **Launch Instance**
+a. Go to **EC2** service in Amazon Console and Click on **Launch Instance**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.001.png)
 
-1. Name the instance and select the instance type
+b. Name the instance and select the instance type
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.002.png)
 
@@ -114,11 +114,11 @@ Index
 
 
 
-1. Click on **Create New Key Pair**
+c. Click on **Create New Key Pair**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.004.png)
 
-1. Create a new key pair as follows
+d. Create a new key pair as follows
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.005.png)
 
@@ -126,23 +126,23 @@ Index
 
 
 
-1. Scroll down and Expand **Advanced Details**
+e. Scroll down and Expand **Advanced Details**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.006.png)
 
-1. Click on **Create new IAM profile**
+f. Click on **Create new IAM profile**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.007.png)
 
-1. A new tab (on browser)will be opened. Click on **Create Role**
+g. A new tab (on browser)will be opened. Click on **Create Role**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.008.png)
 
-1. Select the options as shown in below image and click on **Next**
+h. Select the options as shown in below image and click on **Next**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.009.png)
 
-1. Select the below mentioned policies from the **Add Permissions** Screen and click on **Next** 
+i. Select the below mentioned policies from the **Add Permissions** Screen and click on **Next** 
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.010.png)
 
@@ -151,24 +151,24 @@ Index
 
 
 
-1. Specify the **Name** for the role and click on **Create Role**
+j. Specify the **Name** for the role and click on **Create Role**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.011.png)
 
-1. In the previous tab , click on refresh button and select the role which you created
+k. In the previous tab , click on refresh button and select the role which you created
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.012.png)
 
-1. In the Summary section click on Launch Instance
+l. In the Summary section click on Launch Instance
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.013.png)
 
-1. You will see the below screen
+m. You will see the below screen
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.014.png)
 
 
-1. Go To EC2->Instances and you will see the instances running as shown in below image
+n. Go To EC2->Instances and you will see the instances running as shown in below image
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.015.png)
 
@@ -213,11 +213,11 @@ Index
 
 **Step 2**: **Modifying the Security Group**
 
-1. Go To EC2->Instances-> Select the instance which you created->Go To Security Tab-> Click on the Security Group
+a. Go To EC2->Instances-> Select the instance which you created->Go To Security Tab-> Click on the Security Group
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.016.png)
 
-1. Click on Edit Inbound Rules
+b. Click on Edit Inbound Rules
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.017.png)
 
@@ -234,7 +234,7 @@ Index
 
 
 
-1. Add the below rules and Click on Save Rules
+c. Add the below rules and Click on Save Rules
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.018.png)
 
@@ -276,15 +276,15 @@ Index
 
 **Step 3**: **Connecting to the EC2 Instances**
 
-1. Select the EC2 Instance and click on **Connect** 
+a. Select the EC2 Instance and click on **Connect** 
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.019.png)
 
-1. Click on **Connect** 
+b. Click on **Connect** 
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.020.png)
 
-1. A new tab(in browser) will be opened
+c. A new tab(in browser) will be opened
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.021.png)
 
@@ -300,16 +300,16 @@ Index
 
 **Step 4**: **Installing .Net Runtime Package**
 
-1. Run the below commands in the EC2 instance which we connected in Step 3
+a. Run the below commands in the EC2 instance which we connected in Step 3 
 1. sudo rpm -Uvh <https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm>
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.022.png)
 
-1. sudo yum install dotnet-sdk-3.1
+2. sudo yum install dotnet-sdk-3.1
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.023.png)
 
-1. Go to directory **/etc/httpd/conf.d** -> Create a new file **default-site.conf** with contents
+3. Go to directory **/etc/httpd/conf.d** -> Create a new file **default-site.conf** with contents
 
 <VirtualHost \*:80>
 
@@ -361,13 +361,13 @@ Index
 
 **Step 5**: **Creating Service File For WebAPP**
 
-1. Go to the below mentioned path
+a. Go to the below mentioned path
 
 /etc/systemd/system
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.024.png)
 
-1. Create a service file MyFirstWebAPP.service with the following content
+b. Create a service file MyFirstWebAPP.service with the following content
 
 [Unit]
 
@@ -418,9 +418,9 @@ WantedBy=multi-user.target
 
 **Step 6**: **Installing httpd** 
 
-1. Run the below commands
-1. sudo yum install httpd
-1. sudo systemctl start httpd && sudo systemctl enable httpd
+a. Run the below commands
+  1. sudo yum install httpd
+  2. sudo systemctl start httpd && sudo systemctl enable httpd
 
 
 
@@ -470,12 +470,12 @@ WantedBy=multi-user.target
 
 **Step 7**: **Installing Code Deploy Agent** 
 
-1. Run the below commands
+a. Run the below commands
 1. sudo yum update
-1. sudo yum install ruby
-1. wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
-1. chmod +x ./install
-1. sudo ./install auto
+2. sudo yum install ruby
+3. wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+4. chmod +x ./install
+5. sudo ./install auto
 
 
 
@@ -522,10 +522,10 @@ WantedBy=multi-user.target
 
 **Step 8**: **Creating WebApp Folder for publishing build files**
 
-1. Run the below commands
+a. Run the below commands
 1. sudo mkdir /app
-1. cd /app
-1. sudo mkdir /webapp
+2. cd /app
+3. sudo mkdir /webapp
 
 
 
@@ -576,14 +576,14 @@ WantedBy=multi-user.target
 
 **Step 9**: **Creating Repository In Code Commit (AWS Console)**
 
-1. Go To CodeCommit -> Create Repository
+a. Go To CodeCommit -> Create Repository
 
-1. Enter the details and Click on **Create**
+b. Enter the details and Click on **Create**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.025.png)
 
 
-1. The Repository will be created and displayed
+c. The Repository will be created and displayed
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.026.png)
 
@@ -602,17 +602,17 @@ WantedBy=multi-user.target
 
 **Step 10**: **Generating Git Credentials**
 
-1. Go To IAM -> Users 
+a. Go To IAM -> Users 
 
 Click on the **user** for whom you need to create **Git Credentials**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.027.png)
 
-1. Go to **Security Credentials** tab
+b. Go to **Security Credentials** tab
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.028.png)
 
-1. Scroll down and go to **HTTPS Git Credentials for AWS CodeCommit.** Click on **Generate Credentials**
+c. Scroll down and go to **HTTPS Git Credentials for AWS CodeCommit.** Click on **Generate Credentials**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.028.png)
 
@@ -620,7 +620,7 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Credentials will be generated. Download the .CSV file by clicking on **Download credentials**
+d. Credentials will be generated. Download the .CSV file by clicking on **Download credentials**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.029.png)
 
@@ -655,11 +655,11 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 **Step 11**: **Creating Project for CodeBuild**
 
-1. Go To CodeBuild -> Click on Create Project 
+a. Go To CodeBuild -> Click on Create Project 
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.030.png)
 
-1. Enter the **Project Configuration** Details as shown below
+b. Enter the **Project Configuration** Details as shown below
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.031.png)
 
@@ -677,7 +677,7 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Enter/ Select the **Source** details as shown below
+c. Enter/ Select the **Source** details as shown below
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.032.png)
 
@@ -705,7 +705,7 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Enter/ Select the **Environment** Details as shown below
+d. Enter/ Select the **Environment** Details as shown below
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.033.png)
 
@@ -720,20 +720,20 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Enter the **Buildspec** details as shown below
+e. Enter the **Buildspec** details as shown below
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.035.png)
 
-1. Enter/ Select the **Artifacts** details as shown below
+f. Enter/ Select the **Artifacts** details as shown below
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.036.png)
 
-1. Enter/ Select the **Logs** details as shown below and click on Create build project
+g. Enter/ Select the **Logs** details as shown below and click on Create build project
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.037.png)
 
 
-1. The CodeBuild Project will be created
+h. The CodeBuild Project will be created
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.038.png)
 
@@ -780,7 +780,7 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 **Step 12**: **Creating Role for CodeDeploy**
 
-1. Go To IAM-> Roles ->Create Role as shown below
+a. Go To IAM-> Roles ->Create Role as shown below
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.039.png)
 
@@ -791,15 +791,15 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 **Step 13**: **Creating Application for CodeDeploy**
 
-1. Go To CodeDeploy -> Click on Create Application
+b. Go To CodeDeploy -> Click on Create Application
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.042.png)
 
-1. Enter the **Application Name** , Select the **Compute Platform** in **Application Configuration** window and Click on **Create application**
+c. Enter the **Application Name** , Select the **Compute Platform** in **Application Configuration** window and Click on **Create application**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.043.png) 
 
-1. The Application Will be Created
+d. The Application Will be Created
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.044.png)
 
@@ -808,25 +808,25 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Click on Application Name
+e. Click on Application Name
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.045.png)
 
-1. Go to **Deployment Groups** Tab and Click on **Create deployment group**
+f. Go to **Deployment Groups** Tab and Click on **Create deployment group**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.046.png)
 
-1. Enter the **Deployment Group Name** and Select the **Service Role** which we created in **Step 11**
+g. Enter the **Deployment Group Name** and Select the **Service Role** which we created in **Step 11**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.047.png)
 
 
 
-1. Select **In-place** as **Deployment type**
+h. Select **In-place** as **Deployment type**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.048.png)
 
-1. Select **CodeDeployDefault.AllAtOnce** in **Deployment settings** and click on **Create deployment group**
+i. Select **CodeDeployDefault.AllAtOnce** in **Deployment settings** and click on **Create deployment group**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.049.png)
 
@@ -848,11 +848,11 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 **Step 14**: **Creating pipeline using CodePipeline**
 
-1. Go To **CodePipeline** -> Click on **Create Pipeline**
+a. Go To **CodePipeline** -> Click on **Create Pipeline**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.050.png)
 
-1. Enter the **Pipeline Name** in **Pipeline settings**, fill the remaining details as shown below and Click on **Next**
+b. Enter the **Pipeline Name** in **Pipeline settings**, fill the remaining details as shown below and Click on **Next**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.051.png)
 
@@ -864,7 +864,7 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Enter/ Select the **Source** details as shown below and Click on **Next**
+c. Enter/ Select the **Source** details as shown below and Click on **Next**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.052.png)
 
@@ -889,16 +889,16 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Enter/ Select **Build** details as shown below and Click on Next
+d. Enter/ Select **Build** details as shown below and Click on Next
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.053.png)
 
-1. Enter the **Deploy** details as shown below and click on **Next**
+e. Enter the **Deploy** details as shown below and click on **Next**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.054.png)
 
 
-1. Review the changes and click on **Create Pipeline**
+f. Review the changes and click on **Create Pipeline**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.055.png)
 
@@ -952,11 +952,11 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 **Step 15**: **Cloning Repository** 
 
-1. Go To **CodeCommit** -> Click on **Repositories** -> Select the **Repository** -> Click on Clone URL -> Click on **Clone HTTPS**
+a. Go To **CodeCommit** -> Click on **Repositories** -> Select the **Repository** -> Click on Clone URL -> Click on **Clone HTTPS**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.056.png)
 
-1. Go To **Visual Studio**-> **AWS Explorer** -> Click on **Add AWS Credentials Profile** **Icon** 
+b. Go To **Visual Studio**-> **AWS Explorer** -> Click on **Add AWS Credentials Profile** **Icon** 
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.057.png)
 
@@ -987,7 +987,7 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Enter the **Profile Details** as shown below
+c. Enter the **Profile Details** as shown below
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.058.png)
 
@@ -1013,11 +1013,11 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. Go to **Visual Studio** -> **Team Explorer** -> In the **AWS** section click on **Connect**
+d. Go to **Visual Studio** -> **Team Explorer** -> In the **AWS** section click on **Connect**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.059.png)
 
-1. Once connected Click on **Clone**
+e. Once connected Click on **Clone**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.060.png)
 
@@ -1033,11 +1033,11 @@ Click on the **user** for whom you need to create **Git Credentials**
 
 
 
-1. In the **Clone AWS CodeCommit Repository** pop-up window select the **Repository** name you want to clone and the **Path** where you want to clone. Click on **Ok**  button
+f. In the **Clone AWS CodeCommit Repository** pop-up window select the **Repository** name you want to clone and the **Path** where you want to clone. Click on **Ok**  button
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.061.png)
 
-1. Once cloned add the **appsec.yml** in the root directory
+g. Once cloned add the **appsec.yml** in the root directory
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.062.png)
 
@@ -1084,7 +1084,7 @@ hooks:
 
 `      `runas: root
 
-1. Add the **buildspecdu.yml** in the root directory (**Note**: this file name should be same as which we mentioned in **Step 11(e)**)
+h. Add the **buildspecdu.yml** in the root directory (**Note**: this file name should be same as which we mentioned in **Step 11(e)**)
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.062.png)
 
@@ -1136,11 +1136,11 @@ artifacts:
 
 `    `- build-id.txt
 
-1. Create a folder **codedeploy-scripts** in the root directory
+i. Create a folder **codedeploy-scripts** in the root directory
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.062.png)
 
-1. Create two files **start-MyFirstWebAPP.sh** and **stop-MyFirstWebAPP.sh**
+j. Create two files **start-MyFirstWebAPP.sh** and **stop-MyFirstWebAPP.sh**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.062.png)
 
@@ -1157,7 +1157,7 @@ systemctl start MyFirstWebAPP.service
 
 systemctl stop MyFirstWebAPP.service
 
-1. In the **Program.cs** add the below line
+k. In the **Program.cs** add the below line
 
 webBuilder.UseStartup<Startup>().UseUrls("http://127.0.0.1:5010");
 
@@ -1203,11 +1203,11 @@ webBuilder.UseStartup<Startup>().UseUrls("http://127.0.0.1:5010");
 
 **Step 16**: **Pushing the changes to CodeCommit to Trigger Pipeline**
 
-1. Go To **Visual Studio** -> **Team Explorer** -> Click on **Changes**
+a. Go To **Visual Studio** -> **Team Explorer** -> Click on **Changes**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.063.png)
 
-1. Enter the **Commit** Message and click on **Commit All**
+b. Enter the **Commit** Message and click on **Commit All**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.064.png)
 
@@ -1216,11 +1216,11 @@ webBuilder.UseStartup<Startup>().UseUrls("http://127.0.0.1:5010");
 
 
 
-1. **Team Explorer** -> Click on **Sync**
+c. **Team Explorer** -> Click on **Sync**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.065.png)
 
-1. In the **Outgoing Commits** section click on **Push**
+d. In the **Outgoing Commits** section click on **Push**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.066.png)
 
@@ -1230,7 +1230,7 @@ webBuilder.UseStartup<Startup>().UseUrls("http://127.0.0.1:5010");
 
 
 
-1. Once Pushed the Code, you can see in the AWS Console that the pipeline is triggered
+e. Once Pushed the Code, you can see in the AWS Console that the pipeline is triggered
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.067.png)
 
@@ -1271,15 +1271,15 @@ webBuilder.UseStartup<Startup>().UseUrls("http://127.0.0.1:5010");
 
 **Step 17**: **Testing the Web Application**
 
-1. Go To **Route53** -> **Hosted Zone**-> Click on the **Domain Name**
+a. Go To **Route53** -> **Hosted Zone**-> Click on the **Domain Name**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.068.png)
 
-1. Click on **Create Record**
+b. Click on **Create Record**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.069.png)
 
-1. Enter the details as shown below and click on **Create Records**
+c. Enter the details as shown below and click on **Create Records**
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.070.png)
 
@@ -1288,10 +1288,10 @@ webBuilder.UseStartup<Startup>().UseUrls("http://127.0.0.1:5010");
 
 
 
-1. Open any browser and hit the url which you created above
+d. Open any browser and hit the url which you created above
 
 ![](Images/Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.071.png)
 
 
-2
+
 
