@@ -102,7 +102,7 @@ Index
 
 1. Go to **EC2** service in Amazon Console and Click on **Launch Instance**
 
-![](Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.001.png)
+![Images](Aspose.Words.d57fd952-0f64-432a-9794-4f43074846fb.001.png)
 
 1. Name the instance and select the instance type
 
